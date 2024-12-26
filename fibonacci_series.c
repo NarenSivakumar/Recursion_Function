@@ -34,16 +34,18 @@ int main()
         fibo(n,0,1);
         printf("\n");
 }
-fibo(int n, int x, int y)
+void fibo(int n, int x, int y)
 {
+        int z;
         if(x<n){
         printf("%d",x);
         z = x + y;
         x = y;
         y = z;
-        return fibo(n,x,z);
+        fibo(n,x,z);
         }
 }
+
 
        
         
